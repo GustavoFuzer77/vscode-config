@@ -1,5 +1,4 @@
 # vscode-config
-visual studio code config. jdk is present, if you don't want it just remove it. 🔥
 
 {
     "workbench.iconTheme": "material-icon-theme",
