@@ -4,11 +4,42 @@
   "editor.fontSize": 15,
   "editor.fontFamily": "Fira Code",
   "editor.fontLigatures": true,
-  "workbench.colorTheme": "Dracula",
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": [
+          //following will be in italic (=FlottFlott)
+          "comment",
+          "entity.name.type.class", //class names
+          "keyword", //import, export, return…
+          "constant", //String, Number, Boolean…, this, super
+          "storage.modifier", //static keyword
+          "storage.type.class.js", //class keyword
+        ],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": [
+          //following will be excluded from italics (VSCode has some defaults for italics)
+          "invalid",
+          "keyword.operator",
+          "constant.numeric.css",
+          "keyword.other.unit.px.css",
+          "constant.numeric.decimal.js",
+          "constant.numeric.json"
+        ],
+        "settings": {
+          "fontStyle": ""
+        }
+      }
+    ]
+},
   // Dracula personalized
   "workbench.colorCustomizations": {
-//     // Side: #13141f
-//     // Main: #171724
+    // Side: #13141f
+    // Main: #171724
     "activityBar.activeBackground": "#bd93f910",
     "activityBar.activeBorder": "#ff79c680",
     "activityBar.background": "#171724",
@@ -60,8 +91,8 @@
     "editorGutter.modifiedBackground": "#8be9fd80",
     "editorHoverWidget.background": "#171724",
     "editorHoverWidget.border": "#6272a4",
-    "editorIndentGuide.activeBackground": "#ffffff45",
-    "editorIndentGuide.background": "#ffffff1a",
+    // "editorIndentGuide.activeBackground": "#ffffff45",
+    // "editorIndentGuide.background": "#ffffff1a",
     "editorLineNumber.foreground": "#6272a4",
     "editorLink.activeForeground": "#8be9fd",
     "editorMarkerNavigation.background": "#13141f",
@@ -218,5 +249,8 @@
   "window.zoomLevel": -1,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "workbench.preferredHighContrastColorTheme": "Default Dark+",
-  "workbench.iconTheme": "material-icon-theme"
+  "workbench.iconTheme": "material-icon-theme",
+  "material-icon-theme.activeIconPack": "nest",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "workbench.colorTheme": "Dracula"
 }
